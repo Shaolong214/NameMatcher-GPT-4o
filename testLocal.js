@@ -4,7 +4,7 @@ const { handler } = require('./NameMatcherLambda/matcher.js');
 // Simulate the event and context
 const event = {
     queryStringParameters: {
-        name: "吴华文"
+        name: "华文吴"
     }
 };
 const context = {};

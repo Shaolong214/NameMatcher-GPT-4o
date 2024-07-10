@@ -7,8 +7,21 @@ const namesList = [
     "Annie Lee 李安妮"
 ];
 
+// function findMatch(inputName: string): string | null {
+//     return namesList.find(name => name.toLowerCase().includes(inputName.toLowerCase())) || null;
+// }
+
+function normalizeName(name: string): string[] {
+    return name.split(/[\s]+/).map(part => part.toLowerCase());
+}
+
 function findMatch(inputName: string): string | null {
-    return namesList.find(name => name.toLowerCase().includes(inputName.toLowerCase())) || null;
+    const normalizedInput = normalizeName(inputName);
+    return namesList.find(name => {
+        const normalizedParts = normalizeName(name);
+        // Check if all parts of the input name are found in the name string, disregarding order
+        return normalizedInput.every(inputPart => normalizedParts.includes(inputPart));
+    }) || null;
 }
 
 export async function handler(event: APIGatewayEvent, context: Context) {

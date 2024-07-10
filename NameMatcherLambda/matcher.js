@@ -16,8 +16,19 @@ const namesList = [
     "Huawen Wu 华文吴",
     "Annie Lee 李安妮"
 ];
+// function findMatch(inputName: string): string | null {
+//     return namesList.find(name => name.toLowerCase().includes(inputName.toLowerCase())) || null;
+// }
+function normalizeName(name) {
+    return name.split(/[\s]+/).map(part => part.toLowerCase());
+}
 function findMatch(inputName) {
-    return namesList.find(name => name.toLowerCase().includes(inputName.toLowerCase())) || null;
+    const normalizedInput = normalizeName(inputName);
+    return namesList.find(name => {
+        const normalizedParts = normalizeName(name);
+        // Check if all parts of the input name are found in the name string, disregarding order
+        return normalizedInput.every(inputPart => normalizedParts.includes(inputPart));
+    }) || null;
 }
 function handler(event, context) {
     return __awaiter(this, void 0, void 0, function* () {
