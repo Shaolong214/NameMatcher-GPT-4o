@@ -6,8 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="a713bc8d-d20f-4960-b62a-1383f1b539f0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NameMatcherLambda/matcher.js" beforeDir="false" afterPath="$PROJECT_DIR$/NameMatcherLambda/matcher.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NameMatcherLambda/matcher.ts" beforeDir="false" afterPath="$PROJECT_DIR$/NameMatcherLambda/matcher.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/testLocal.js" beforeDir="false" afterPath="$PROJECT_DIR$/testLocal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +76,7 @@
       <updated>1720519713669</updated>
       <workItem from="1720519714739" duration="160000" />
       <workItem from="1720519912024" duration="4357000" />
-      <workItem from="1720524277768" duration="6926000" />
+      <workItem from="1720524277768" duration="15870000" />
     </task>
     <servers />
   </component>
