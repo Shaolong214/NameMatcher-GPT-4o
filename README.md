@@ -11,7 +11,7 @@ This project develops an AWS Lambda function that matches a given human name aga
 
 ## Prerequisites
 - AWS Account
-- Node.js (v14.x or later)
+- Node.js
 - npm (Node Package Manager)
 - AWS CLI configured with appropriate permissions
 - OpenAI API key
