@@ -15,18 +15,36 @@ const openai = new OpenAI({
 });
 
 // Function to find the best match using OpenAI
+// async function findMatch(inputName: string): Promise<string | null> {
+//     try {
+//         const prompt = `Find the best matching name in the list for: ${inputName}\nList: ${namesList.join('\n')}`;
+//         const response = await openai.completions.create({
+//             model: "gpt-3.5-turbo",
+//             prompt: prompt,
+//             max_tokens: 60,
+//             stop: ["\n"]
+//         });
+//
+//         // Extract and return the best match
+//         return response.choices[0].text.trim();
+//     } catch (error) {
+//         console.error("Error accessing OpenAI API:", error);
+//         return null;
+//     }
+// }
+
 async function findMatch(inputName: string): Promise<string | null> {
     try {
         const prompt = `Find the best matching name in the list for: ${inputName}\nList: ${namesList.join('\n')}`;
-        const response = await openai.completions.create({
-            model: "text-davinci-002",
-            prompt: prompt,
-            max_tokens: 60,
-            stop: ["\n"]
+        // Using the chat completion method
+        const response = await openai.chat.completions.create({
+            model: "gpt-3.5-turbo",
+            messages: [{role: "system", content: "The following are names:"}, {role: "user", content: prompt}],
+            max_tokens: 60
         });
 
         // Extract and return the best match
-        return response.choices[0].text.trim();
+        return response.choices[0].message.content;
     } catch (error) {
         console.error("Error accessing OpenAI API:", error);
         return null;
