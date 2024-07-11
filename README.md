@@ -1,7 +1,8 @@
 # Name Matcher Lambda
 
 ## Description
-This project develops an AWS Lambda function that matches a given human name against a predefined list using OpenAI's API. The Lambda function is written in TypeScript and deployed to the AWS Cloud, enabling queries via API Gateway. This setup is designed to help new candidates familiarize themselves with the company's development environment, TypeScript programming, and best practices in using large language models (LLMs) such as handling inconsistencies and reducing hallucinations.
+This AWS Lambda function, developed in TypeScript, matches a given human name against a predefined list using OpenAI's API. The function is deployed to the AWS Cloud and can be accessed via API Gateway. This setup utilizes OpenAI's GPT-4o model to enhance the accuracy of name matching, demonstrating best practices in handling large language models (LLMs), such as managing inconsistencies and reducing potential errors. The serverless architecture of AWS Lambda ensures that the function is both scalable and cost-effective, catering to a wide range of applications that require dynamic name matching capabilities.
+
 
 ## Features
 - **Name Matching**: Matches a given name input against a predefined list of names.
@@ -64,6 +65,9 @@ zip -r deployment_package.zip ./*
 
 ## Testing
 - **Local Testing**:
-- Run `npm test` to execute predefined tests (ensure you have testing frameworks like Jest set up).
+  - To run local tests for the Lambda function, execute the following command in your terminal:
+```bash
+node testLocal.js
+```
 - **Postman Testing**:
-- Use the provided Postman collection to test the API. Adjust parameters as needed to test different inputs.
+  - Use the provided Postman collection to test the API. Adjust parameters as needed to test different inputs.
